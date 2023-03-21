@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var model = ViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack(spacing: 20) {
+            TextField("Enter your regular expression", text: $model.pattern)
+            TextEditor(text: $model.input)
+            
+            TabView {
+                List(model.matches) { match in
+                    Text("\(match.text) (\(match.position))")
+                }
+                .tabItem {
+                    Text("Matches")
+                }
+                
+                Text("replacement")
+                
+                Text("Generated Code")
+            }
         }
-        .padding()
     }
 }
 
