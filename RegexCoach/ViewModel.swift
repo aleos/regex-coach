@@ -32,7 +32,7 @@ class ViewModel: ObservableObject {
                 let wholeText = String(input[result.range])
                 guard !wholeText.isEmpty else { return nil }
                 
-                var wholeMatch = Match(text: wholeText, position: "Position goes here")
+                var wholeMatch = Match(text: wholeText, position: result.range.position(in: input))
                 // handle capture groups
                 return wholeMatch
             }
