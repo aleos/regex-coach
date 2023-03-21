@@ -47,9 +47,28 @@ struct ContentView: View {
                     Text("Matches")
                 }
                 
-                Text("replacement")
+                VStack {
+                    TextField("Replacement text", text: $model.replacement)
+                        .padding()
+                    TextEditor(text: .constant(model.replacementOutput))
+                        .padding(5)
+                        .border(.quaternary)
+                        .padding([.horizontal, .bottom])
+                }
+                .tabItem {
+                    Text("Replacement")
+                }
                 
-                Text("Generated Code")
+                TextEditor(text: .constant(model.code))
+                    .padding(5)
+                    .border(.quaternary)
+                    .padding()
+                    .transformEnvironment(\.font) { font in
+                        font = font?.monospaced()
+                    }
+                    .tabItem {
+                        Text("Code")
+                    }
             }
         }
         .onAppear(perform: model.update)

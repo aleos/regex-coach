@@ -17,7 +17,25 @@ class ViewModel: ObservableObject {
     @Published var isValid = true
     
     var code: String {
-        "Hello, Swift!"
+        """
+        import Foundation
+        
+        let input = \"""
+        \(input)
+        \"""
+        
+        let regex = /\(pattern)/
+        let replacement = "\(replacement)"
+        let results = input.matches(of: regex)
+        
+        for result in results {
+            let matchText = String(input[result.range])
+            print("Found: \\(matchText)")
+        }
+        
+        let output = input.replacing(regex, with: replacement)
+        print(output)
+        """
     }
     
     func update() {
@@ -26,6 +44,7 @@ class ViewModel: ObservableObject {
         do {
             let regex = try Regex(pattern)
             let results = input.matches(of: regex)
+            replacementOutput = input.replacing(regex, with: replacement)
             isValid = true
             
             matches = results.compactMap { result in
