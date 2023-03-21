@@ -22,6 +22,24 @@ class ViewModel: ObservableObject {
     
     func update() {
         guard !pattern.isEmpty else { return }
-        print("Running pattern…")
+        
+        do {
+            let regex = try Regex(pattern)
+            let results = input.matches(of: regex)
+            isValid = true
+            
+            matches = results.compactMap { result in
+                let wholeText = String(input[result.range])
+                guard !wholeText.isEmpty else { return nil }
+                
+                var wholeMatch = Match(text: wholeText, position: "Position goes here")
+                // handle capture groups
+                return wholeMatch
+            }
+        } catch {
+            matches.removeAll()
+            replacementOutput = ""
+            isValid = false
+        }
     }
 }
