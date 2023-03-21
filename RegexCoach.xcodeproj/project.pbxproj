@@ -11,6 +11,7 @@
 		571463F129C9A4D80040171A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571463F029C9A4D80040171A /* ContentView.swift */; };
 		571463F329C9A4D90040171A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571463F229C9A4D90040171A /* Assets.xcassets */; };
 		571463F629C9A4D90040171A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571463F529C9A4D90040171A /* Preview Assets.xcassets */; };
+		57EEE30829C9A6D500BACF71 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EEE30729C9A6D500BACF71 /* Match.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		571463F229C9A4D90040171A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		571463F529C9A4D90040171A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		571463F729C9A4D90040171A /* RegexCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RegexCoach.entitlements; sourceTree = "<group>"; };
+		57EEE30729C9A6D500BACF71 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				571463EE29C9A4D80040171A /* RegexCoachApp.swift */,
 				571463F029C9A4D80040171A /* ContentView.swift */,
+				57EEE30729C9A6D500BACF71 /* Match.swift */,
 				571463F229C9A4D90040171A /* Assets.xcassets */,
 				571463F729C9A4D90040171A /* RegexCoach.entitlements */,
 				571463F429C9A4D90040171A /* Preview Content */,
@@ -141,6 +144,7 @@
 			files = (
 				571463F129C9A4D80040171A /* ContentView.swift in Sources */,
 				571463EF29C9A4D80040171A /* RegexCoachApp.swift in Sources */,
+				57EEE30829C9A6D500BACF71 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
