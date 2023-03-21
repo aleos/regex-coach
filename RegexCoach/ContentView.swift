@@ -29,6 +29,9 @@ struct ContentView: View {
             }
         }
         .onAppear(perform: model.update)
+        .scrollContentBackground(.hidden)
+        .font(.title3)
+        .padding()
     }
 }
 
