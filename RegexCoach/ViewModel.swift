@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class ViewModel: ObservedObject {
+class ViewModel: ObservableObject {
     var pattern = ""
     var input = "Text to match here"
     var replacement = ""
@@ -18,5 +18,10 @@ class ViewModel: ObservedObject {
     
     var code: String {
         "Hello, Swift!"
+    }
+    
+    func update() {
+        guard !pattern.isEmpty else { return }
+        print("Running pattern…")
     }
 }
