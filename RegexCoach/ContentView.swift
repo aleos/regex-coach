@@ -28,6 +28,7 @@ struct ContentView: View {
                 Text("Generated Code")
             }
         }
+        .onAppear(perform: model.update)
     }
 }
 
