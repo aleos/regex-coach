@@ -12,9 +12,9 @@ class ViewModel: ObservableObject {
     @AppStorage("input") var input = "Text to match here" { didSet {update() } }
     @AppStorage("replacement") var replacement = "" { didSet {update() } }
     
-    var replacementOutput = ""
-    var matches = [Match]()
-    var isValid = true
+    @Published var replacementOutput = ""
+    @Published var matches = [Match]()
+    @Published var isValid = true
     
     var code: String {
         "Hello, Swift!"
